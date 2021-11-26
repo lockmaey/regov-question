@@ -1,6 +1,6 @@
 package me.lukman.sectiontwo;
 
-abstract class Account {
+class Account {
 
     String name;
     int balance;
@@ -10,12 +10,18 @@ abstract class Account {
         this.balance = balance;
     }
 
-    public abstract void deposit(int amount);
+    public void deposit(int amount) {
+        this.balance += amount;
+    }
 
-    public abstract void withdraw(int amount);
+    public void withdraw(int amount) {
+        this.balance -= amount;
+    }
 
-    public void viewBalance() {
+    @Override
+    public String toString() {
         System.out.println(name + "'s account. Balance: " + balance);
+        return super.toString();
     }
 
 }

@@ -6,16 +6,6 @@ public class DevAccount extends Account {
         super(name, balance);
     }
 
-    @Override
-    public void deposit(int amount) {
-        this.balance += amount;
-    }
-
-    @Override
-    public void withdraw(int amount) {
-        this.balance -= amount;
-    }
-
     public int getBalance() {
         return this.balance;
     }
